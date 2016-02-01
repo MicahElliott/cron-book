@@ -1,3 +1,6 @@
 00preface.md
 01intro.md
 02syntax.md
+03organization.md
+10tidy.md
+wrappers.md

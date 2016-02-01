@@ -4,6 +4,10 @@
 # Effective Batching with Cron
 # Idiosyncratic Cron
 # Five-Star Cron Czar
+# Timeless Cron
+
+Add book here at some point:
+https://www.goodreads.com/book/new?book[title]=cron
 
 Introduction
   Debian-based (vixie) or RedHat/Arch (cronie)
@@ -17,33 +21,14 @@ Introduction
   running on servers
   history
 
-Variables
+Syntax and Variables
   spaces in vars (not like shell)
+  no var substitution: bad: PATH=/usr/local/bin:$PATH
   multiple email addresses
   debugging/printing variables
 
-Security
-  allow/deny
-  limited PATH
-  SELinux
-  ssh-agent
-
-Error-proofing Email Setup
-  all output goes to mail
-  opening firewalld ports
-  tls secure mail sending
-  dig/host: PTR, DKIM, SPF
-  single server mail relay(?)
-  watching logs with `journalctl`
-  configuring postfix
-    postmap canonical
-    mydomain
-    ipv4
-  [CheckMX](https://toolbox.googleapps.com/apps/checkmx/check?from=support.google.com&origin=checkmx-widget&domain=qldbs42.membean.com)
-  [Kitterman SPF testing](http://www.kitterman.com/spf/validate.html?)
-  [MXToolbox](http://mxtoolbox.com/SuperTool.aspx)
-  viewing headers
-    use “show original” in gmail
+Shells (sh, dash, bash, zsh)
+  zsh for everything
 
 In-memory crontabs (/var/spool, EDITOR=vi) vs files
   multi-user vs system-wide
@@ -59,8 +44,36 @@ Execution Environment
   use a ~/.cronsh (?)
   zsh
   wish
+  rubysh
   chruby
   virtualenv
+
+Lifecycle of a Job
+  state machine diagram
+
+Security
+  allow/deny
+  limited PATH
+  SELinux
+  ssh-agent
+
+Error-proofing Email Setup
+  all output goes to mail
+  checking mail: mailx, mutt
+  opening firewalld ports
+  tls secure mail sending
+  dig/host: PTR, DKIM, SPF
+  single server mail relay(?)
+  watching logs with `journalctl`
+  configuring postfix
+    postmap canonical
+    mydomain
+    ipv4
+  [CheckMX](https://toolbox.googleapps.com/apps/checkmx/check?from=support.google.com&origin=checkmx-widget&domain=)
+  [Kitterman SPF testing](http://www.kitterman.com/spf/validate.html?)
+  [MXToolbox](http://mxtoolbox.com/SuperTool.aspx)
+  viewing headers
+    use “show original” in gmail
 
 Documentation
   Navigating man pages: cron(8), crontab(5), crontab(1)
@@ -79,11 +92,17 @@ Testing
   watching log files (/var/log/cron vs journalctl)
   checking for mail that stuck locally
 
+Keeping Systems Tidy
+  check-mail (check for local unwanted system mail)
+  check-reboot
+  check-pkgs-update (yum-cron or your own)
+
 Performance
   running minutely?
   detecting overlapping runs
 
 Sounding alarms
+  opsgenie/pagerduty
 
 The Venerable and Ubiquitous 5-star syntax
   The 6th field: user
@@ -96,7 +115,7 @@ More Syntax
 
 Output
   silence for good cases (fd-teacher-school-high)
-  exit statuses
+  exit statuses (non-zero does not trigger email alone)
   directing stderr to stdout
 
 Locaation of crontabs
@@ -107,8 +126,10 @@ Editor support
   extension `.crontab`
 
 Anacron
-  at
-  one-off jobs: at
+  yum install at
+  sc start atd
+  one-off jobs: at, atq, atrm, batch
+  run-parts
   offline mode
   reducing all-at-once cluster load
 
@@ -137,11 +158,15 @@ Other cron Advancements
   [Heroku Scheduler](https://devcenter.heroku.com/articles/scheduler)
 
 Wrapping in Scripts
+  executable
   nice, wish
   chruby
 
 Other uses in the wild
   tools that use/manipulate crontabs (sugarcrm, whenever, jenkins)
+
+Cron with Config Mgmt/Automation Tools
+  Ansible: http://docs.ansible.com/ansible/cron_module.html
 
 Interlude: Intro to related tools
   postfix
@@ -167,12 +192,11 @@ Common Mistakes
   no sudo for non-tty
   swapping hours and minutes
   star in wrong column
-  no var substitution: bad: PATH=/usr/local/bin:$PATH
 
 List of Quirks
   doing something with X11
 
-List of Best Practices
+List of Best Current Practices (BCPs)
   use two digits
   use sun instead of 0
   align columns
