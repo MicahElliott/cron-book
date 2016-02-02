@@ -1,6 +1,17 @@
-00preface.md
-01intro.md
-02syntax.md
-03organization.md
-10tidy.md
-wrappers.md
+# https://github.com/raganwald/javascript-allonge/blob/master/manuscript/Book.txt
+
+frontmatter:
+
+    00preface.md
+
+mainmatter:
+
+    01intro.md
+    02syntax.md
+    03organization.md
+    10tidy.md
+    wrappers.md
+
+backmatter:
+
+    glossary.md

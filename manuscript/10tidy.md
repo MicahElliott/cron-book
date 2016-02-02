@@ -78,13 +78,9 @@ shoot-mtr
 
 cache-warm
 
-## A Useful Shell Prompt
+## Retry Pattern
 
-It’s helpful to have an informative shell prompt for testing cron scripts.
+resque-pressure
 
-Shows:
-
-- exit status number
-- non-exit-0 red color
-- what user
-- date and time
+Run once. If problem, write a temp file with a couple numbers in it. Next run
+will check numbers and either clear numbers if improved, or alert if worsened.

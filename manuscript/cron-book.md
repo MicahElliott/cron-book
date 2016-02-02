@@ -59,6 +59,10 @@ Security
 
 Error-proofing Email Setup
   all output goes to mail
+  clients
+    tutanota
+    gmail
+    mutt
   checking mail: mailx, mutt
   opening firewalld ports
   tls secure mail sending

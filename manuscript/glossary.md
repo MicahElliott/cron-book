@@ -7,8 +7,8 @@ Stanza
 Daemon
 : x
 
-Batch Job
-: x
+Batch Processing/Job
+: https://en.wikipedia.org/wiki/Batch_processing
 
 Streaming
 : x
@@ -25,11 +25,14 @@ Epoch
 Time scheduling
 : x
 
-UTC/GMT
+UTC
+: x
+
+GMT
 : x
 
 ISO 8601
-: x
+: https://en.wikipedia.org/wiki/ISO_8601
 
 Job Control Language (JCL)
 :  x
@@ -46,3 +49,6 @@ systemd
 
 service
 : x
+
+cycle time
+: amount of time for a monitor daemon to sleep before running checks again

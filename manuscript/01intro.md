@@ -116,6 +116,8 @@ sysadmins for remote work is Vi (which is usually the Vim version). Vim
 supports a nice syntax highlighting that will dress up a crontab to look
 something like this:
 
+### Vim
+
 ![Crontab with Vim syntax highlighting](images/vim-crontab-snapshot.png)
 
 The `crontab.vim` syntax file is already included as part of vim. Try opening
@@ -133,3 +135,17 @@ recognized. It may help to save any crontab files you work on with an explicit
 `.crontab` suffix. Or, you can add this to the top or bottom of the file:
 
     # vim:ft=crontab:
+
+### Emacs
+
+
+## Shell Setup: A Useful Prompt
+
+It’s helpful to have an informative shell prompt for testing cron scripts.
+
+Shows:
+
+- exit status number
+- non-exit-0 red color
+- what user
+- date and time
