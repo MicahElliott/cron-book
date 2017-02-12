@@ -5,7 +5,7 @@ You can wrap jobs.
 
 ## Lifecycle of a Job
 
-[images/]
+![Job State Diagram](images/job-states.png)
 
 ## Replacing the SHELL
 

@@ -20,6 +20,9 @@ invention.
 
 It as been adopted by SugarCRM, Jenkins, and others.
 
+The `*` mean first-through-last values. For minutes, you could write `0-59`
+instead of `*`.
+
 ### Some Examples
 
 Every minute:

@@ -1,10 +1,18 @@
 # System Setup
 
+## Installing Everything
+
+vim, emacs, ntp, cron, postfix, zsh
+
+
 ## The Hardware Clock
+
 
 ## Network Time Protocol (NTP), Keeping in Sync
 
+
 ## Time Zone
+
 Should you set your servers to UTC or local time? It’s a contentious issue,
 but one you’ll have to make.
 

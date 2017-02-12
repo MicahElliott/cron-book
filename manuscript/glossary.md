@@ -1,8 +1,10 @@
+# Glossary
+
 BCP
 : Best Common Practice
 
 Stanza
-: A single line in a crontab with 
+: A single line in a crontab with a timespec and shell command
 
 Daemon
 : x

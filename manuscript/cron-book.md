@@ -6,6 +6,45 @@
 # Five-Star Cron Czar
 # Timeless Cron
 
+## Icons
+{icon=fire-extinguisher}
+G> ## Vroom!
+compass
+cogs
+diamond
+film
+birthday-cake
+bomb
+bullhorn
+lightbulb-o
+database
+globe
+money
+signal (chart increasing)
+thumbs-up-o
+tree
+trophy
+umbrella
+shield (security)
+send-o (email)
+life-ring
+map(-signs)
+road
+sliders
+wrench
+tty
+quote-left
+puzzle-piece
+rocket
+link
+paperclip
+hand-o-right
+github
+linux
+wikipedia-w
+fort-awesome
+stack-overflow
+
 Add book here at some point:
 https://www.goodreads.com/book/new?book[title]=cron
 
@@ -22,6 +61,7 @@ Introduction
   history
 
 Syntax and Variables
+  custom vim syntax/highlighting
   spaces in vars (not like shell)
   no var substitution: bad: PATH=/usr/local/bin:$PATH
   multiple email addresses
@@ -50,6 +90,25 @@ Execution Environment
 
 Lifecycle of a Job
   state machine diagram
+
+One-offs
+  && beep
+  && mailx
+  at, atq, atrm
+  batch
+
+Time Table of jobs on various servers
+  (calendar-like view for a day?)
+  common: logrotate, locatedb
+  crunchers: upacs, fidelity (report generation)
+  crm: sugar’s jobs?
+  monitor
+  db server: compress tables
+  app server: compile logs
+  queue server (redis/resque/rabbit)
+
+Recipes
+  2-minute freshdesk updates
 
 Security
   allow/deny
@@ -132,7 +191,6 @@ Editor support
 Anacron
   yum install at
   sc start atd
-  one-off jobs: at, atq, atrm, batch
   run-parts
   offline mode
   reducing all-at-once cluster load

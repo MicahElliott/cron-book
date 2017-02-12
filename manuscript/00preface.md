@@ -36,6 +36,12 @@ such syntax in a scheduling tool you’re working on!
 
 [^streaming]: real-time processing of small chunks of data
 
+D> ### Stream vs. Batch Processing
+D>
+D> https://www.quora.com/What-are-the-differences-between-batch-processing-and-stream-processing-systems
+D>
+D>
+
 
 ## Who Should Read this Book
 

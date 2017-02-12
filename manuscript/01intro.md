@@ -1,3 +1,5 @@
+{line-numbers=off}
+
 # Introduction
 
 Ever since the dawn of time-telling, humans have been scheduling. Our internal
@@ -137,6 +139,14 @@ recognized. It may help to save any crontab files you work on with an explicit
     # vim:ft=crontab:
 
 ### Emacs
+
+http://unix.stackexchange.com/questions/18200/open-emacs-in-a-terminal-when-editing-crontab
+
+    export VISUAL='emacs -nw'
+
+[Crontab mode](https://www.emacswiki.org/emacs/CrontabMode)
+
+
 
 
 ## Shell Setup: A Useful Prompt

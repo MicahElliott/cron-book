@@ -1,17 +1,17 @@
 # https://github.com/raganwald/javascript-allonge/blob/master/manuscript/Book.txt
 
-frontmatter:
+frontmatter.md
+00preface.md
 
-    00preface.md
+mainmatter.md
+01intro.md
+02syntax.md
+03organization.md
+email-setup.md
+10tidy.md
+wrappers.md
 
-mainmatter:
-
-    01intro.md
-    02syntax.md
-    03organization.md
-    10tidy.md
-    wrappers.md
-
-backmatter:
-
-    glossary.md
+backmatter.md
+glossary.md
+env-tricks.md
+bio.md
